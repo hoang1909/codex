@@ -1,0 +1,7 @@
+rewards:
+  2:
+    - "say %player% reached level 2!"
+  3:
+    - "say %player% reached level 3!"
+  4:
+    - "say %player% reached level 4!"
