@@ -1,0 +1,19 @@
+# Default configuration for TreeEventPlugin
+
+tree-visual:
+  enabled: true
+
+  layers:
+    - material: OAK_LOG
+      y-offset: 0
+    - material: OAK_LOG
+      y-offset: 1
+    - material: OAK_LEAVES
+      y-offset: 2
+
+  glow: false
+
+  particle-effect:
+    enabled: true
+    type: VILLAGER_HAPPY
+    interval-ticks: 200
