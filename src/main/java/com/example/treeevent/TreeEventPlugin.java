@@ -20,6 +20,7 @@ public class TreeEventPlugin extends JavaPlugin {
         saveResource("rewards.yml", false);
 
         treeManager = new TreeManager(this);
+        treeManager.loadData();
         visualizer = new TreeVisualizer(this);
         Bukkit.getPluginManager().registerEvents(new TreeListener(treeManager, visualizer), this);
         getCommand("treeevent").setExecutor(new TreeCommand(treeManager));
