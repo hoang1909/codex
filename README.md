@@ -1,49 +1,49 @@
-# TreeEventPlugin
+# 🌳 TreeEventPlugin
 
-TreeEventPlugin is a simple Spigot plugin for a tree watering event.
+**TreeEventPlugin** is a lightweight Spigot plugin for a collaborative **tree-watering event** system. Each player tracks their own progress and levels up their "tree", earning random rewards.
 
-## Building
+---
 
-This plugin uses Maven. To build the jar run:
+## 🚀 Features
+
+- 🌱 Water a shared event tree using a special item
+- 📈 Each player has personal watering progress and tree level
+- 🎁 Randomized rewards based on tree level
+- 🏆 Leaderboard based on personal tree level
+- 🧾 Custom EXP requirements and reward tables via YAML
+- 🔄 Event can be reset or ended with admin commands
+- 📊 PlaceholderAPI support: `%treeevent_level%`
+
+---
+
+## 🔧 Building the Plugin
+
+This project uses **Maven**.
+
+To build the JAR file:
 
 ```bash
-mvn -U package
+mvn -U clean package
 ```
 
-The resulting jar will be in `target/TreeEventPlugin-1.0-SNAPSHOT.jar` and can be
-placed in your server's `plugins` folder.
+> 📝 Use `-U` to force update snapshot dependencies like PlaceholderAPI.
 
-## Usage
+The compiled JAR will be in:
 
-1. Start your server so the plugin can generate the default configuration files.
-2. Edit `exp_levels.yml` and `rewards.yml` in the plugin folder to customise
-   experience requirements and rewards.
-3. Configure `config.yml` to adjust the decorative tree layers and effects.
-4. Give players a Water Bucket named **"Water Bucket"** and place a fixed
-   `ArmorStand` as the watering target.
-5. Players right-click the stand with the bucket to gain EXP.
-6. Use `/treeevent stats` to view your progress.
-7. Admins can run `/treeevent reset` to clear data or `/treeevent end` to announce
-   the event end.
-
-If PlaceholderAPI is installed you can use `%treeevent_level%` to display a
-player's current level.
-
-### config.yml example
-
-```yaml
-tree-visual:
-  enabled: true
-  layers:
-    - material: OAK_LOG
-      y-offset: 0
-    - material: OAK_LOG
-      y-offset: 1
-    - material: OAK_LEAVES
-      y-offset: 2
-  glow: false
-  particle-effect:
-    enabled: true
-    type: VILLAGER_HAPPY
-    interval-ticks: 200
 ```
+target/TreeEventPlugin-1.0-SNAPSHOT.jar
+```
+
+Place it into your Minecraft server's `plugins/` folder.
+
+---
+
+## 📚 Usage
+
+1. Start your server to generate default config files.
+2. Configure:
+   - `exp_levels.yml` – EXP requirements per level
+   - `rewards.yml` – item rewards per level
+   - `config.yml` – visual decoration for the shared tree
+3. Give players a **Water Bucket** renamed to `"Water Bucket"` (can customize).
+4. Place a **fixed ArmorStand** at the event area to act as the shared tre
