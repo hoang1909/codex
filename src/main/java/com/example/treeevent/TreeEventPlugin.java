@@ -1,10 +1,7 @@
 package com.example.treeevent;
 
-import me.clip.placeholderapi.PlaceholderAPI;
 import me.clip.placeholderapi.expansion.PlaceholderExpansion;
 import org.bukkit.Bukkit;
-import org.bukkit.command.Command;
-import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.jetbrains.annotations.NotNull;
@@ -20,6 +17,8 @@ public class TreeEventPlugin extends JavaPlugin {
         saveResource("rewards.yml", false);
 
         treeManager = new TreeManager(this);
+        treeManager.loadData();
+
         visualizer = new TreeVisualizer(this);
         Bukkit.getPluginManager().registerEvents(new TreeListener(treeManager, visualizer), this);
         getCommand("treeevent").setExecutor(new TreeCommand(treeManager));
