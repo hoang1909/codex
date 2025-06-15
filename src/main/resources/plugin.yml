@@ -1,0 +1,16 @@
+name: TreeEventPlugin
+main: com.example.treeevent.TreeEventPlugin
+version: 1.0
+api-version: 1.20
+commands:
+  treeevent:
+    description: Tree event commands
+    usage: /treeevent <stats|reset|end>
+    permission: treeevent.use
+permissions:
+  treeevent.use:
+    description: Access to treeevent stats
+    default: true
+  treeevent.admin:
+    description: Admin commands
+    default: op
